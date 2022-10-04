@@ -18,17 +18,17 @@
         executable: /bin/bash 
     
     - name: create intance master
-      shell: "openstack server create kyuga-master --image ubuntu-focal-amd64 --flavor m1.large --security-group allow-any --key-name region3-key --network cluster-yuga --host region3-key --os-compute-api-version 2.74"
+      shell: "openstack server create kyuga-master --image ubuntu-focal-amd64 --flavor m1.large --security-group 81fb986d-8704-48cc-8a61-d989b9959a87 --key-name region3-key --network cluster-yuga --host s3r01svr3 --os-compute-api-version 2.74"
       args:
         executable: /bin/bash 
         
     - name: create intance worker-1
-      shell: "openstack server create kyuga-worker-1 --image ubuntu-focal-amd64 --flavor m1.large --security-group allow-any --key-name region3-key --network cluster-yuga --host region3-key --os-compute-api-version 2.74"
+      shell: "openstack server create kyuga-worker-1 --image ubuntu-focal-amd64 --flavor m1.large --security-group 81fb986d-8704-48cc-8a61-d989b9959a87 --key-name region3-key --network cluster-yuga --host s3r01svr3 --os-compute-api-version 2.74"
       args:
         executable: /bin/bash 
         
     
     - name: create intance worker-2
-      shell: "openstack server create kyuga-worker-2 --image ubuntu-focal-amd64 --flavor m1.large --security-group allow-any --key-name region3-key --network cluster-yuga --host region3-key --os-compute-api-version 2.74"
+      shell: "openstack server create kyuga-worker-2 --image ubuntu-focal-amd64 --flavor m1.large --security-group 81fb986d-8704-48cc-8a61-d989b9959a87 --key-name region3-key --network cluster-yuga --host s3r01svr3 --os-compute-api-version 2.74"
       args:
         executable: /bin/bash 
